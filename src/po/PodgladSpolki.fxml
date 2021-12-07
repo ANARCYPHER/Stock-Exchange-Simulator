@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="po.PodgladSpolkiController">
+   <children>
+      <VBox alignment="TOP_CENTER" layoutX="36.0" layoutY="37.0" AnchorPane.leftAnchor="35.0" AnchorPane.rightAnchor="35.0" AnchorPane.topAnchor="35.0">
+         <children>
+            <Label fx:id="label" alignment="CENTER" contentDisplay="CENTER" text="Dane spółki:" textAlignment="CENTER" VBox.vgrow="ALWAYS">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="60.0" spacing="5.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Przychód:">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <Region />
+                  <Label fx:id="przychod" text="Label" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="44.0" spacing="5.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Zysk:">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <Region />
+                  <Label fx:id="zysk" text="Label" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="27.0" spacing="5.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Pierwsza wycena:">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <Region />
+                  <Label fx:id="pierwszaWycena" text="Label" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="76.0" spacing="5.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Kapitał własny:">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <Region />
+                  <Label fx:id="kapitalWlasny" text="Label" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="78.0" spacing="5.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Kapitał zakładowy:">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <Region />
+                  <Label fx:id="kapitalZakladowy" text="Label" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="76.0" spacing="5.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Kurs otwarcia:">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <Region />
+                  <Label fx:id="kursOtwarcia" text="Label" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="219.0" spacing="5.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Kurs maksymalny:">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <Region />
+                  <Label fx:id="kursMax" text="Label" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="219.0" spacing="5.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Kurs minimalny:">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <Region />
+                  <Label fx:id="kursMin" text="Label" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="112.0" spacing="5.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Kurs aktualny:">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <Region />
+                  <Label fx:id="kursAktualny" text="Label" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="78.0" spacing="5.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Obroty:" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <Region />
+                  <Label fx:id="obroty" text="Label" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" spacing="5.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Liczba akcji:">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <Region />
+                  <Label fx:id="liczbaAkcji" text="Label" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" spacing="5.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Wolumen:">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <Region />
+                  <Label fx:id="wolumen" text="Label" />
+               </children>
+            </HBox>
+            <Button fx:id="wykupAkcji" mnemonicParsing="false" onMouseClicked="#wykupAkcji" text="Wykup akcji">
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin></Button>
+            <Button fx:id="usun" mnemonicParsing="false" onMouseClicked="#usun" text="Usuń">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

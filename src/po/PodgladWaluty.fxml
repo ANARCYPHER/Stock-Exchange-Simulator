@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="po.PodgladWalutyController">
+   <children>
+      <VBox alignment="TOP_CENTER" layoutX="36.0" layoutY="37.0" AnchorPane.leftAnchor="35.0" AnchorPane.rightAnchor="35.0" AnchorPane.topAnchor="35.0">
+         <children>
+            <Label fx:id="label" alignment="CENTER" contentDisplay="CENTER" text="Dane waluty:" textAlignment="CENTER" VBox.vgrow="ALWAYS">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="60.0" spacing="5.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nazwa:">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <Region />
+                  <Label fx:id="nazwa" text="Label" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="106.0" spacing="5.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Kraj:">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <Region />
+                  <Label fx:id="kraj" text="Label" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="219.0" spacing="5.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Kurs maksymalny:">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <Region />
+                  <Label fx:id="kursMax" text="Label" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="219.0" spacing="5.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Kurs minimalny:">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <Region />
+                  <Label fx:id="kursMin" text="Label" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="112.0" spacing="5.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Kurs aktualny:">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <Region />
+                  <Label fx:id="kursAktualny" text="Label" />
+               </children>
+            </HBox>
+            <Button fx:id="showChart" mnemonicParsing="false" onMouseClicked="#showChart" text="Pokaż wykres wartości">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

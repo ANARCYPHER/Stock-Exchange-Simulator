@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="530.0" prefWidth="480.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="po.PodgladRynkuSurowcowController">
+   <children>
+      <VBox alignment="TOP_CENTER" layoutX="36.0" layoutY="37.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="35.0" AnchorPane.rightAnchor="35.0" AnchorPane.topAnchor="35.0">
+         <children>
+            <Label fx:id="nazwa" alignment="CENTER" contentDisplay="CENTER" text="Nazwa" textAlignment="CENTER" VBox.vgrow="ALWAYS">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="112.0" spacing="5.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Marża">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <Region />
+                  <Label fx:id="marza" text="Label" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" spacing="10.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <VBox alignment="CENTER" spacing="3.0">
+                     <children>
+                        <Label text="Notowane Surowce">
+                           <font>
+                              <Font size="16.0" />
+                           </font></Label>
+                        <ListView fx:id="surowce" maxWidth="300.0" onMouseClicked="#podgladAktywow" VBox.vgrow="ALWAYS" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

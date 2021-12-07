@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="po.PanelKontrolny">
+   <children>
+      <VBox prefHeight="400.0" prefWidth="785.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="10.0">
+         <children>
+            <HBox prefHeight="400.0" prefWidth="580.0" spacing="5.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="171.0" prefWidth="192.0" spacing="5.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <HBox alignment="TOP_RIGHT">
+                           <children>
+                              <Label alignment="TOP_CENTER" contentDisplay="CENTER" text="Kliknij by dodać obiekt:" textAlignment="CENTER">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="TOP_RIGHT">
+                           <children>
+                              <Label alignment="TOP_CENTER" contentDisplay="CENTER" text="Aktywa" textAlignment="CENTER">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <Region prefHeight="25.0" prefWidth="8.0" />
+                              <Button fx:id="pokaz" mnemonicParsing="false" onMouseClicked="#podgladAktywow" text="Pokaż">
+                                 <HBox.margin>
+                                    <Insets right="3.0" />
+                                 </HBox.margin></Button>
+                              <Region layoutX="194.0" layoutY="10.0" prefHeight="25.0" prefWidth="22.0" />
+                           </children>
+                        </HBox>
+                        <ListView fx:id="listaAktywow" VBox.vgrow="ALWAYS" />
+                        <Region />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="10.0" layoutY="10.0" prefHeight="171.0" prefWidth="192.0" spacing="5.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <HBox spacing="5.0">
+                           <children>
+                              <Button fx:id="dodaj" mnemonicParsing="false" onAction="#dodaj" text="Dodaj" textAlignment="CENTER">
+                                 <HBox.margin>
+                                    <Insets left="5.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Region HBox.hgrow="ALWAYS" />
+                              <Button fx:id="start" mnemonicParsing="false" onMouseClicked="#start" prefHeight="25.0" prefWidth="50.0" text="Start" />
+                           </children>
+                        </HBox>
+                        <Label alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="25.0" prefWidth="193.0" text="Giełdy" textAlignment="CENTER">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <ListView fx:id="listaGield" onMouseClicked="#podgladRynku" VBox.vgrow="ALWAYS" />
+                        <Region />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" layoutX="202.0" layoutY="10.0" prefHeight="171.0" prefWidth="192.0" spacing="5.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <HBox spacing="5.0">
+                           <children>
+                              <Button fx:id="pauza" mnemonicParsing="false" onMouseClicked="#stop" prefHeight="25.0" prefWidth="50.0" text="Pauza" />
+                              <Region HBox.hgrow="ALWAYS" />
+                              <Label fx:id="data" minHeight="25.0" prefHeight="25.0" text="Dzień: 01-01-2018">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <Label alignment="TOP_CENTER" contentDisplay="CENTER" text="Inwestorzy, Fundusze" textAlignment="CENTER">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <ListView fx:id="listaInwestorow" onMouseClicked="#podgladInwestora" VBox.vgrow="ALWAYS" />
+                        <Region />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" layoutX="394.0" layoutY="10.0" prefHeight="171.0" prefWidth="192.0" spacing="5.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <HBox spacing="5.0">
+                           <children>
+                              <Region layoutX="125.0" layoutY="10.0" prefHeight="25.0" prefWidth="9.0" />
+                              <Label minHeight="25.0" prefHeight="25.0" text="Stan:">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="stan" layoutX="80.0" layoutY="10.0" minHeight="25.0" prefHeight="25.0" text="PAUZA">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="save" mnemonicParsing="false" onMouseClicked="#save" text="SAVE" />
+                              <Button fx:id="load" mnemonicParsing="false" onMouseClicked="#load" text="LOAD" />
+                              <Region HBox.hgrow="ALWAYS" />
+                           </children>
+                        </HBox>
+                        <Label alignment="TOP_CENTER" contentDisplay="CENTER" text="Spółki" textAlignment="CENTER">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <ListView fx:id="listaSpolek" onMouseClicked="#podgladSpolki" VBox.vgrow="ALWAYS" />
+                        <Region />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

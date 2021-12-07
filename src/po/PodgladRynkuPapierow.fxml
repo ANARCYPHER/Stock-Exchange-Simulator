@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="530.0" prefWidth="480.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="po.PodgladRynkuPapierowController">
+   <children>
+      <VBox alignment="TOP_CENTER" layoutX="36.0" layoutY="37.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="35.0" AnchorPane.rightAnchor="35.0" AnchorPane.topAnchor="35.0">
+         <children>
+            <Label fx:id="nazwa" alignment="CENTER" contentDisplay="CENTER" text="Nazwa" textAlignment="CENTER" VBox.vgrow="ALWAYS">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="60.0" spacing="5.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Kraj:">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <Region />
+                  <Label fx:id="kraj" text="Label" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="44.0" spacing="5.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Miasto:">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <Region />
+                  <Label fx:id="miasto" text="Label" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="27.0" spacing="5.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Adres:">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <Region />
+                  <Label fx:id="adres" text="Label" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="76.0" spacing="5.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Waluta:">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <Region />
+                  <Label fx:id="waluta" text="Label" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="112.0" spacing="5.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Marża">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <Region />
+                  <Label fx:id="marza" text="Label" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" spacing="10.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <VBox alignment="CENTER" spacing="3.0">
+                     <children>
+                        <Label text="Notowane Spółki">
+                           <font>
+                              <Font size="16.0" />
+                           </font></Label>
+                        <ListView fx:id="akcje" maxWidth="300.0" VBox.vgrow="ALWAYS" />
+                        <Button fx:id="podgladSpolki" mnemonicParsing="false" onMouseClicked="#podgladSpolki" text="Pokaż" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" layoutX="238.0" layoutY="10.0" spacing="3.0">
+                     <children>
+                        <Label text="Indeksy">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <ListView fx:id="indeksy" maxWidth="300.0" onMouseClicked="#podgladIndeksow" VBox.vgrow="ALWAYS" />
+                        <HBox alignment="TOP_CENTER" spacing="5.0">
+                           <children>
+                              <Button fx:id="dodajIndeksStaly" mnemonicParsing="false" onMouseClicked="#dodajIndeksStaly" text="Dodaj Stały" />
+                              <Button fx:id="dodajIndeksDynamiczny" layoutX="116.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#dodajIndeksWarunkowy" text="Dodaj Warunkowy" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
